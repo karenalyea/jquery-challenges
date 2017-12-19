@@ -63,7 +63,7 @@
   teamOneShootButton.click(function() {
     teamOneNumShots.html ( parseInt(teamOneNumShots.html()) + 1);
   if(Math.random() > .3){
-    $("body").css("background-color", "green ");
+    $("body").css("background-color", "maroon ");
     teamOneNumHits.html (parseInt(teamOneNumHits.html()) + 1);
   } else {
     $("body").css("background-color", "white ");
@@ -77,7 +77,7 @@
   teamTwoShootButton.click(function () {
     teamTwoNumShots.html(parseInt(teamTwoNumShots.html()) + 1);
     if (Math.random() > .3) {
-      $("body").css("background-color", "lightsalmon");
+      $("body").css("background-color", "gold");
       teamTwoNumHits.html(parseInt(teamTwoNumHits.html()) + 1);
     } else {
       $("body").css("background-color", "white ");
