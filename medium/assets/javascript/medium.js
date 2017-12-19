@@ -38,6 +38,58 @@
 
 (function(){
 
+  const resetButton = $("#reset")
+  const numResets = $("#num-resets")
+  const teamOneShootButton = $("#teamone-shoot")
+  const teamOneNumHits = $("#teamone-numhits")
+  const teamOneNumShots = $("#teamone-numshots")
+  const teamTwoShootButton = $("#teamtwo-shoot")
+  const teamTwoNumHits = $("#teamtwo-numhits")
+  const teamTwoNumShots = $("#teamtwo-numshots")
+
+  
+
+  resetButton.click(function (){
+    numResets.html ( parseInt(numResets.html()) + 1);
+    parseInt(teamOneNumShots.html(0, 10));
+    parseInt(teamOneNumHits.html(0, 10));
+    parseInt(teamTwoNumShots.html(0, 10));
+    parseInt(teamTwoNumHits.html(0, 10));
+    $("body").css("background-color", "white ");
+
+
+  })
+
+  teamOneShootButton.click(function() {
+    teamOneNumShots.html ( parseInt(teamOneNumShots.html()) + 1);
+  if(Math.random() > .3){
+    $("body").css("background-color", "green ");
+    teamOneNumHits.html (parseInt(teamOneNumHits.html()) + 1);
+  } else {
+    $("body").css("background-color", "white ");
+  }
+  
+
+
+
+  })
+
+  teamTwoShootButton.click(function () {
+    teamTwoNumShots.html(parseInt(teamTwoNumShots.html()) + 1);
+    if (Math.random() > .3) {
+      $("body").css("background-color", "lightsalmon");
+      teamTwoNumHits.html(parseInt(teamTwoNumHits.html()) + 1);
+    } else {
+      $("body").css("background-color", "white ");
+
+    }
+
+
+
+
+  })
+
+
   //jQuery equivelent to window.onload = function{}
   //code in here wont run until page loads
   $(function(){
